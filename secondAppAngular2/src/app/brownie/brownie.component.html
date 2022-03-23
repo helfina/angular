@@ -1,0 +1,13 @@
+<div class="card">
+    <img src="{{ gateau.photo }}" alt="">
+    <h2>{{ gateau.nom }}</h2>
+    <!--  ()  indique à angular un evenement present dans le composant typescript en lien avec notre composant html l'appelant -->
+<app-boutton  [temps]="gateau.temps" [cat]="gateau.categorie" [niv]="gateau.niveau"  ></app-boutton>
+</div>
+
+<div class="card">
+  <img src="{{ gateau.photo }}" alt="">
+  <h2>{{ gateau.nom }}</h2>
+  <!--  ()  indique à angular un evenement present dans le composant typescript en lien avec notre composant html l'appelant -->
+  <app-boutton [temps]="gateau.temps" [cat]="gateau.categorie" [niv]="gateau.niveau"  ></app-boutton>
+ </div>
