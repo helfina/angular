@@ -1,0 +1,56 @@
+<form #f="ngForm" (submit)="addProduct(f)"  >
+    <div class="form-group">
+      <label class="col-form-label mt-4" for="title">Nom de la recette</label>
+      <input ngModel type="text" class="form-control" placeholder="Nom de la recette"  name="title" id="title">
+    </div>
+  
+    <div class="form-group">
+      <label for="ingredients" class="form-label mt-4">Ingredients</label>
+      <textarea ngModel class="form-control"  name="ingredients" id="ingredients" rows="3"></textarea>
+    </div>
+  
+    <div class="form-group">
+      <label for="step" class="form-label mt-4">Step</label>
+      <textarea ngModel class="form-control" name="step" id="step" rows="3"></textarea>
+    </div>
+  
+    <div class="form-group">
+      <label for="picture" class="form-label mt-4">Picture</label>
+      <input ngModel class="form-control" name="picture" type="text"  id="picture">
+    </div>
+  
+  
+    <div class="form-group">
+      <label for="category" class="form-label mt-4">Category</label>
+      <select ngModel class="form-select" name="category" id="category">
+        <option *ngFor="let category of categories" value="{{ category.name }}" >{{ category.name | uppercase }}</option>
+        <!-- <option value="plat" >Plat</option>
+        <option value="dessert" >Dessert</option> -->
+      </select>
+    </div>
+
+    <div class="form-group">
+        <label for="level" class="form-label mt-4">Niveau</label>
+        <select ngModel class="form-select" name="level" id="level">
+          <option value="debutant" >Débutant</option>
+          <option value="intermediaire" >Intermédiaire</option>
+          <option value="difficile" >Difficile</option>
+    
+        </select>
+      </div>
+  
+    <div class="form-group">
+      <label class="col-form-label mt-4" for="time">Temps de préparation</label>
+      <input ngModel type="number" class="form-control" placeholder="Temps de préparation" id="time" name="time">
+    </div>
+  
+    <div class="form-group">
+      <label class="col-form-label mt-4" for="cookTime">Temps de cuisson</label>
+      <input ngModel type="number" class="form-control" placeholder="Temps de cuisson"  name="CookTime" id="CookTime">
+    </div>
+
+
+    <button type="submit" class="btn btn-primary mt-2">Enregistrer</button>
+  
+  
+  </form>

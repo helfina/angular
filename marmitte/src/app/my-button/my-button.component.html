@@ -1,0 +1,18 @@
+<div class="card-text text-white">
+  <button type="button" (click)="onChange('detail')" class="btn btn-info m-2 p-1">Temps</button>
+
+  <div *ngIf="affichage=='detail'">
+    <p class="card-text ">category : {{category}}</p>
+    <p class="card-text">Level : {{level}}</p>
+  </div>
+
+  <button type="button" (click)="onChange('temps')" class="btn btn-info m-2 p-1">Détails</button>
+
+  <div  *ngIf="affichage=='temps'">
+    <p class="card-text">time : {{time}}</p>
+    <p class="card-text">cookTime : {{cookTime}}</p>
+  </div>
+</div>
+
+
+
